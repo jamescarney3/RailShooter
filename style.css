@@ -1,0 +1,134 @@
+/* RESET */
+
+html, body, header, nav, h1, a, ul, li,
+strong, main, section, img, div, h2, h3, p,
+form, fieldset, label, input, textarea,
+button, article, footer, small, figure {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  list-style: none;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: normal;
+  box-sizing: inherit;
+  text-align: inherit;
+  background: transparent;
+  opacity: inherit;
+  text-decoration: none;
+}
+
+.group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* STYLING */
+
+body {
+  background-color: #111;
+}
+
+console {
+  display: block;
+  position: relative;
+  margin: auto;
+  width: 900px;
+  margin-top: 10px;
+  border: 5px solid #333;
+  border-radius: 10px;
+  overflow: auto;
+  box-shadow: 5px 0px 20px -7px #930,
+              -5px 0px 20px -7px #930,
+              0px 5px 20px -7px #930,
+              0px -5px 20px -7px #930;
+}
+
+wrapper {
+  display: block;
+  float: left;
+  position: relative;
+  background-color: #000;
+  border: 5px solid #333;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+}
+
+canvas {
+  display: block;
+  float: left;
+}
+
+.display-panel {
+  display: block;
+  float: left;
+  background-color: #000;
+  border: 5px solid #333;
+  width: 310px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  color: #050;
+  font-family: courier;
+  padding: 5px;
+}
+
+title {
+  font-size: 32px;
+  text-align: center;
+}
+
+.game-information li {
+  font-size: 24px;
+}
+
+.game-information span {
+  float: right;
+}
+
+overlay {
+  display: block;
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 50%;
+  left: -150px;
+  padding-top: 5px;
+  width: 300px; /* for testing */
+  border: 2px solid #050;
+  border-radius: 5px;
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 1s ease, opacity 1s ease;
+}
+
+overlay > a {
+  display: block;
+  margin: auto;
+  margin-bottom: 5px;
+  width: 286px;
+  color: #050;
+  border: 2px solid #050;
+  border-radius: 4px;
+  text-align: center;
+  font-family: courier;
+  font-weight: bold;
+  transition: color .25s ease;
+}
+
+overlay > a:hover {
+  color: #0f0;
+  border: 2px solid #0f0;
+  cursor: crosshair;
+}
+
+
+.metal {
+  background: -webkit-linear-gradient(100deg, #ccc 60%, #888 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(100deg, #ccc 60%, #888 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(100deg, #ccc 60%, #888 90%); /* IE10 */
+  background:      -o-linear-gradient(100deg, #ccc 60%, #888 90%); /* Opera 11.10+ */
+  background:         linear-gradient(100deg, #ccc 60%, #888 90%); /* W3C */
+}

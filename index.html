@@ -2,20 +2,13 @@
 <html>
   <head>
     <title>RailShooter!</title>
-    <style>
-      body {
-        background-color: #eee;
-      }
-      canvas {
-        display: block;
-        background-color: #000;
-        margin: auto;
-        margin-top: 20px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" type="text/css">
+
     <script src="https://code.createjs.com/easeljs-0.8.1.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script src="vendor/keymaster.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
     <script src="lib/utils.js"></script>
 
     <script src="lib/starField.js"></script>
@@ -39,11 +32,29 @@
   </head>
 
   <body>
-    <canvas id="canvas" width="500" height="600"></canvas>
-
+    <console class="group metal">
+      <wrapper>
+        <canvas id="canvas" width="500" height="600"></canvas>
+        <overlay class="group">
+          <a id="new-game">new game</a>
+          <a id="controls">controls</a>
+          <a id="about">about</a>
+          <a id="github">github repo</a>
+        </overlay>
+      </wrapper>
+      <title class="display-panel">RailShooter 9000</title>
+      <infobox class="display-panel group">
+        <ul class="game-information">
+          <li>score: <span id="score">###</span></li>
+          <li>wave: <span id="wave">###</span></li>
+          <li>lives: <span id="lives">###</span></li>
+        </ul>
+      </infobox>
+    </console>
     <script>
-      var game = new RailShooter.Game();
-      new RailShooter.GameView(game, game.stage).start();
+      $(document).ready(function(){
+        window.gameView = new RailShooter.GameView();
+      });
     </script>
   </body>
 </html>

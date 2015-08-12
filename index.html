@@ -37,9 +37,29 @@
         <canvas id="canvas" width="500" height="600"></canvas>
         <overlay class="group">
           <a id="new-game">new game</a>
-          <a id="controls">controls</a>
-          <a id="about">about</a>
-          <a id="github">github repo</a>
+          <a id="controls">
+            controls
+            <p>
+              move ship with w, s, a, & d keys, fire guns with spacebar
+            </p>
+          </a>
+          <a id="about">
+            about
+            <p>
+              RailShooter 9000 is a JavaScript/HTML5 browser game which
+              makes extensive use of the CreateJS library (specifically its
+              EaselJS component). It interacts with the DOM via jQuery and handles
+              keyboard inputs with the keymaster library. I built RailShooter 9000
+              as a student of the May-August 2015 cohort at App Academy in New
+              York, both for practice and out of a longtime enthusiasm for the
+              rail-shooter/bullet-hell/shmup genre.
+            </p>
+          </a>
+          <a id="github"
+             target="_blank"
+             href="https://github.com/jamescarney3/RailShooter">
+            github repo
+          </a>
         </overlay>
       </wrapper>
       <title class="display-panel">RailShooter 9000</title>
@@ -50,6 +70,19 @@
           <li>lives: <span id="lives">###</span></li>
         </ul>
       </infobox>
+      <leaderboard class="display-panel">
+        <ul id="high-scores" class="high-scores">
+          Leaderboard
+          <li class="group"><rank>1.</rank> <name>N/A</name><score>000</score></li>
+          <li class="group"><rank>2.</rank> <name>N/A</name><score>000</score></li>
+          <li class="group"><rank>3.</rank> <name>N/A</name><score>000</score></li>
+          <li class="group"><rank>4.</rank> <name>N/A</name><score>000</score></li>
+          <li class="group"><rank>5.</rank> <name>N/A</name><score>000</score></li>
+        </ul>
+      </leaderboard>
+      <credits class="display-panel credits">
+        James Carney | New York, NY | 2015
+      </credits>
     </console>
     <script>
       $(document).ready(function(){

@@ -36,6 +36,7 @@ console {
   margin: auto;
   width: 900px;
   margin-top: 10px;
+  margin-bottom: 10px;
   border: 5px solid #333;
   border-radius: 10px;
   overflow: auto;
@@ -89,10 +90,42 @@ title {
   float: right;
 }
 
+.high-scores {
+  font-size: 24px;
+  text-align: center;
+}
+
+.high-scores li {
+  display: block;
+  text-align: left;
+}
+
+.high-scores li rank {
+  display: block;
+  float: left;
+  margin-right: 5px;
+}
+
+.high-scores li name {
+  display: block;
+  float: left;
+}
+
+.high-scores li score {
+  display: block;
+  float: right;
+}
+
+.credits {
+  margin-top: 235px;
+  font-size: 14px;
+  text-align: center;
+}
+
 overlay {
   display: block;
   position: absolute;
-  margin-top: 200px;
+  margin-top: 150px;
   margin-left: 50%;
   left: -150px;
   padding-top: 5px;
@@ -108,20 +141,29 @@ overlay > a {
   display: block;
   margin: auto;
   margin-bottom: 5px;
-  width: 286px;
+  width: 276px;
   color: #050;
   border: 2px solid #050;
   border-radius: 4px;
   text-align: center;
   font-family: courier;
   font-weight: bold;
+  font-size: 20px;
   transition: color .25s ease;
+  padding: 5px;
 }
 
 overlay > a:hover {
   color: #0f0;
   border: 2px solid #0f0;
   cursor: crosshair;
+}
+
+overlay > a > p {
+  display: none;
+  opacity: 0;
+  visibility: 0;
+  font-size: 14px;
 }
 
 

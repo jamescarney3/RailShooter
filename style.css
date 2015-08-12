@@ -164,6 +164,8 @@ overlay > a > p {
   opacity: 0;
   visibility: 0;
   font-size: 14px;
+  transition: visibility 1s ease, opacity 1s ease;
+  /* Y U NO WORK??? */
 }
 
 
